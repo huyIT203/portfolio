@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pham Quang Huy | Flutter Mobile Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <span class="loader-text">Loading Portfolio</span>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <span class="logo-text">PQH</span>
+            <span class="logo-dot"></span>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+            <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+            <a href="#funfacts" class="nav-link" data-section="funfacts">Fun Facts</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <a href="PhamQuangHuy_FlutterMobileDeveloper.pdf" download class="btn-download">
+                <i class="fas fa-download"></i>
+                <span>Download CV</span>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-link" data-section="home">Home</a>
+            <a href="#about" class="mobile-link" data-section="about">About</a>
+            <a href="#experience" class="mobile-link" data-section="experience">Experience</a>
+            <a href="#projects" class="mobile-link" data-section="projects">Projects</a>
+            <a href="#funfacts" class="mobile-link" data-section="funfacts">Fun Facts</a>
+            <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+            <a href="PhamQuangHuy_FlutterMobileDeveloper.pdf" download class="mobile-download">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section class="section section-home" id="home">
+            <div class="home-container">
+                <div class="home-content">
+                    <div class="home-badge animate-item">
+                        <span class="badge-dot"></span>
+                        <span>Available for work</span>
+                    </div>
+                    <h1 class="home-title animate-item">
+                        <span class="title-line">Welcome to</span>
+                        <span class="title-line title-accent">My Portfolio</span>
+                    </h1>
+                    <h2 class="home-subtitle animate-item">
+                        I'm <span class="text-gradient">Pham Quang Huy</span>
+                    </h2>
+                    <p class="home-role animate-item">Flutter Mobile Developer</p>
+                    <p class="home-description animate-item">
+                        Building clean, scalable, and user-friendly mobile applications.
+                        Experienced with BLoC, REST API integration, JWT authentication.
+                    </p>
+                    <div class="home-actions animate-item">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                    <div class="home-social animate-item">
+                        <a href="https://github.com/huyIT203" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ph%E1%BA%A1mquanghuy/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:phamquangnamhuy1908@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-visual">
+                    <div class="profile-container animate-item">
+                        <div class="profile-glow"></div>
+                        <div class="profile-ring"></div>
+                        <div class="profile-ring profile-ring-2"></div>
+                        <img src="image/profile/me.png" alt="Pham Quang Huy" class="profile-image">
+                        <div class="profile-particles" id="profile-particles"></div>
+                    </div>
+                    <div class="floating-badges">
+                        <div class="floating-badge badge-flutter animate-float">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                            <span>Flutter</span>
+                        </div>
+                        <div class="floating-badge badge-dart animate-float" style="animation-delay: 0.5s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                            <span>Dart</span>
+                        </div>
+                        <div class="floating-badge badge-firebase animate-float" style="animation-delay: 1s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section section-about" id="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag animate-item">Get to know me</span>
+                    <h2 class="section-title animate-item">About <span class="text-gradient">Me</span></h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-content">
+                        <div class="about-text animate-item">
+                            <p class="lead">Hello! I'm a Flutter Mobile Developer who enjoys building practical and user-friendly mobile applications.</p>
+                            <p>I focus on Flutter and Dart, working with <strong>BLoC state management</strong> and <strong>clean architecture</strong> to create scalable and maintainable apps. I have experience integrating REST APIs, handling authentication with JWT (access & refresh tokens), and implementing social login such as Google and Facebook.</p>
+                            <p>Through personal projects like <strong>Mixs</strong> and <strong>Sparkly</strong>, I've worked on real-world features including onboarding flows, calendar-based tracking, image handling, and secure data storage. I also have a backend background, which helps me understand API design and collaborate effectively with backend systems.</p>
+                            <p>I'm currently looking for a <strong>Flutter Junior/Fresher position</strong> where I can grow my skills, learn from experienced developers, and contribute to real products.</p>
+                        </div>
+                        <div class="about-info animate-item">
+                            <div class="info-item">
+                                <span class="info-label">Name</span>
+                                <span class="info-value">Pham Quang Huy</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Vietnam</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">phamquangnamhuy1908@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Education</span>
+                                <span class="info-value">HUTECH - Software Engineering (2021-2025)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card animate-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div class="stat-text">English</div>
+                            <div class="stat-label">Intermediate (B2)</div>
+                        </div>
+                        <div class="stat-card animate-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="stat-number" data-count="2">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card animate-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="stat-number" data-count="15">0</div>
+                            <div class="stat-label">Technologies Used</div>
+                        </div>
+                        <div class="stat-card animate-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="stat-number stat-text" data-text="4+ Years">4+ Years</div>
+                            <div class="stat-label">University & AWS Training</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience/Skills Section -->
+        <section class="section section-experience" id="experience">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag animate-item">What I can do</span>
+                    <h2 class="section-title animate-item">Skills & <span class="text-gradient">Experience</span></h2>
+                </div>
+                
+                <div class="skills-tabs">
+                    <button class="skill-tab active" data-tab="languages">Languages</button>
+                    <button class="skill-tab" data-tab="frameworks">Frameworks</button>
+                    <button class="skill-tab" data-tab="tools">Tools</button>
+                    <button class="skill-tab" data-tab="techniques">Techniques</button>
+                </div>
+
+                <div class="skills-content">
+                    <!-- Languages -->
+                    <div class="skills-panel active" id="languages">
+                        <div class="skills-grid">
+                            <a href="skills/dart.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                                </div>
+                                <h3>Dart</h3>
+                                <p>Primary language for Flutter development. Strong OOP concepts, async programming, null safety.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 85%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/typescript.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                                </div>
+                                <h3>TypeScript</h3>
+                                <p>Used in backend development with Node.js/Express for building RESTful APIs.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 70%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/java.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                                </div>
+                                <h3>Java</h3>
+                                <p>Built backend APIs using Spring Boot with JWT authentication.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 65%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/python.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                                </div>
+                                <h3>Python</h3>
+                                <p>Used for ML services with FastAPI, image processing with background removal.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 60%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="skills-panel" id="frameworks">
+                        <div class="skills-grid">
+                            <a href="skills/flutter.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                                </div>
+                                <h3>Flutter</h3>
+                                <p>Cross-platform mobile development. BLoC pattern, Clean Architecture, Dio, go_router.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 85%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/nodejs.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                                </div>
+                                <h3>Node.js / Express</h3>
+                                <p>Backend development with RESTful APIs, Prisma ORM, JWT authentication.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 70%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/firebase.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+                                </div>
+                                <h3>Firebase</h3>
+                                <p>Authentication, Firestore, Storage. Used in NutriSmart project.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 75%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/fastapi.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+                                </div>
+                                <h3>FastAPI</h3>
+                                <p>Python framework for ML services, image processing endpoints.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 55%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skills-panel" id="tools">
+                        <div class="skills-grid">
+                            <a href="skills/docker.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                                </div>
+                                <h3>Docker</h3>
+                                <p>Containerization for backend, ML services, PostgreSQL, Redis.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 65%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/postgresql.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                                </div>
+                                <h3>PostgreSQL</h3>
+                                <p>Primary database with Prisma ORM for data modeling.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 60%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/git.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                                </div>
+                                <h3>Git / GitHub</h3>
+                                <p>Version control, branching strategies, collaborative development.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 75%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/redis.html" class="skill-card animate-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
+                                </div>
+                                <h3>Redis</h3>
+                                <p>Caching layer for improved API performance.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 50%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Techniques -->
+                    <div class="skills-panel" id="techniques">
+                        <div class="skills-grid">
+                            <a href="skills/state-management.html" class="skill-card animate-item">
+                                <div class="skill-icon technique-icon">
+                                    <i class="fas fa-cubes"></i>
+                                </div>
+                                <h3>BLoC Pattern</h3>
+                                <p>State management with flutter_bloc. Scalable UI state handling.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 85%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/clean-architecture.html" class="skill-card animate-item">
+                                <div class="skill-icon technique-icon">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <h3>Clean Architecture</h3>
+                                <p>Separation of concerns, dependency injection with get_it.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 80%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/rest-api.html" class="skill-card animate-item">
+                                <div class="skill-icon technique-icon">
+                                    <i class="fas fa-plug"></i>
+                                </div>
+                                <h3>REST API Integration</h3>
+                                <p>Dio client, Retrofit, JWT authentication, token refresh.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 85%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="skills/jwt.html" class="skill-card animate-item">
+                                <div class="skill-icon technique-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3>JWT Authentication</h3>
+                                <p>Access/Refresh tokens, secure storage, OAuth integration.</p>
+                                <div class="skill-level">
+                                    <div class="level-bar" style="--level: 80%"></div>
+                                </div>
+                                <span class="skill-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="soft-skills-section">
+                    <h3 class="subsection-title animate-item">Soft Skills</h3>
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-item animate-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Problem Solving</span>
+                        </div>
+                        <div class="soft-skill-item animate-item">
+                            <i class="fas fa-book-reader"></i>
+                            <span>Self-learning</span>
+                        </div>
+                        <div class="soft-skill-item animate-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Time Management</span>
+                        </div>
+                        <div class="soft-skill-item animate-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Communication</span>
+                        </div>
+                        <div class="soft-skill-item animate-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Responsibility</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section section-projects" id="projects">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag animate-item">My Work</span>
+                    <h2 class="section-title animate-item">Featured <span class="text-gradient">Projects</span></h2>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: Mixs -->
+                    <article class="project-card project-featured animate-item">
+                        <div class="project-image project-image-white">
+                            <div class="project-logo-container">
+                                <img src="image/project_logo/logo_mixs.png" alt="Mixs Logo" class="project-logo">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-tag">Personal Project</span>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <h3 class="project-title">Mixs</h3>
+                            <p class="project-subtitle">Smart Outfit Planning Mobile App</p>
+                            <p class="project-description">
+                                A full-stack application for wardrobe management, outfit creation, calendar-based OOTD tracking, and smart outfit recommendations using Machine Learning.
+                            </p>
+                            <div class="project-features">
+                                <span><i class="fas fa-check"></i> Wardrobe Management</span>
+                                <span><i class="fas fa-check"></i> Calendar OOTD</span>
+                                <span><i class="fas fa-check"></i> Image Processing</span>
+                                <span><i class="fas fa-check"></i> Social Auth</span>
+                            </div>
+                            <div class="project-tech">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" title="Dart">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/huyIT203/outfit-planner" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                                <a href="project-mixs.html" class="project-link project-link-primary">
+                                    <span>Learn More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Sparkly -->
+                    <article class="project-card project-featured animate-item">
+                        <div class="project-image project-image-orange-pink">
+                            <div class="project-logo-container">
+                                <img src="image/project_logo/logo_sparkly.png" alt="Sparkly Logo" class="project-logo">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-tag">Personal Project</span>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <h3 class="project-title">Sparkly</h3>
+                            <p class="project-subtitle">Smart Nutrition & Health Management Platform</p>
+                            <p class="project-description">
+                                A comprehensive full-stack nutrition tracking and health management ecosystem with mobile app, backend API, nutrition engine, and admin dashboard.
+                            </p>
+                            <div class="project-features">
+                                <span><i class="fas fa-check"></i> Mobile App (Flutter)</span>
+                                <span><i class="fas fa-check"></i> Backend API (Spring Boot)</span>
+                                <span><i class="fas fa-check"></i> Nutrition Engine (FastAPI)</span>
+                                <span><i class="fas fa-check"></i> Admin Dashboard (React)</span>
+                            </div>
+                            <div class="project-tech">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/huyIT203/Healthylife-sparkly.git" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Repository</span>
+                                </a>
+                                <a href="project-sparkly.html" class="project-link project-link-primary">
+                                    <span>Learn More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Facts Section -->
+        <section class="section section-funfacts" id="funfacts">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag animate-item">Get to know me better</span>
+                    <h2 class="section-title animate-item">Fun <span class="text-gradient">Facts</span></h2>
+                    <p class="section-subtitle animate-item">A glimpse into my personal interests and hobbies</p>
+                </div>
+                <div class="funfacts-grid">
+                    <div class="funfact-card animate-item">
+                        <div class="funfact-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>sometime I play piano</h3>
+                    </div>
+                    <div class="funfact-card animate-item">
+                        <div class="funfact-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>I played some tournaments in a videogame</h3>
+                    </div>
+                    <div class="funfact-card animate-item">
+                        <div class="funfact-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <h3>as a child I wanted to be a marine biologist</h3>
+                    </div>
+                    <div class="funfact-card animate-item">
+                        <div class="funfact-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>I really love to read</h3>
+                    </div>
+                    <div class="funfact-card animate-item">
+                        <div class="funfact-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>I enjoy working with data</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section section-contact" id="contact">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag animate-item">Let's Connect</span>
+                    <h2 class="section-title animate-item">Get In <span class="text-gradient">Touch</span></h2>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p class="contact-text animate-item">
+                            I'm currently looking for a Flutter Junior/Fresher position. 
+                            Feel free to reach out if you have any opportunities or just want to connect!
+                        </p>
+                        <div class="contact-cards">
+                            <a href="mailto:phamquangnamhuy1908@gmail.com" class="contact-card animate-item">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <span class="contact-card-label">Email</span>
+                                    <span class="contact-card-value">phamquangnamhuy1908@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="https://github.com/huyIT203" target="_blank" class="contact-card animate-item">
+                                <div class="contact-card-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <span class="contact-card-label">GitHub</span>
+                                    <span class="contact-card-value">github.com/huyIT203</span>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ph%E1%BA%A1mquanghuy/" target="_blank" class="contact-card animate-item">
+                                <div class="contact-card-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <span class="contact-card-label">LinkedIn</span>
+                                    <span class="contact-card-value">linkedin.com/in/phạmquanghuy</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cv-download-section animate-item">
+                            <h3>Download My CV</h3>
+                            <p>Get a detailed overview of my skills and experience</p>
+                            <a href="PhamQuangHuy_FlutterMobileDeveloper.pdf" download class="btn btn-download-large">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Download CV (PDF)</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-visual animate-item">
+                        <div class="contact-3d" id="contact-3d"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">PQH</span>
+                <span class="logo-dot"></span>
+            </div>
+            <p class="footer-text">
+                Designed & Built by <strong>Pham Quang Huy</strong>
+            </p>
+            <p class="footer-copyright">
+                © 2025 All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkly | Pham Quang Huy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="common-animations.js" defer></script>
+    <script src="project-carousel.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+        <div class="project-nav-links">
+            <a href="https://github.com/huyIT203/Healthylife-sparkly.git" target="_blank" class="project-nav-link">
+                <i class="fab fa-github"></i>
+                <span>View Repository</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Project Page -->
+    <main class="project-page">
+        <!-- Hero Section -->
+        <section class="project-hero project-hero-green">
+            <div class="project-hero-content">
+                <div class="project-icon-hero project-icon-hero-green">
+                    <img src="image/project_logo/logo_sparkly.png" alt="Sparkly Logo">
+                </div>
+                <span class="project-type-badge">
+                    <i class="fas fa-layer-group"></i>
+                    Full-Stack Platform
+                </span>
+                <h1 class="project-hero-title">Sparkly</h1>
+                <p class="project-hero-subtitle">
+                    Smart Nutrition & Health Management Platform - A comprehensive full-stack ecosystem with mobile app, backend API, nutrition engine, and admin dashboard.
+                </p>
+                <div class="project-hero-tech">
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                        <span>Flutter</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                        <span>Spring Boot</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <span>FastAPI</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <span>React</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="project-hero-links">
+                    <a href="https://github.com/huyIT203/Healthylife-sparkly.git" target="_blank" class="hero-link hero-link-primary">
+                        <i class="fab fa-github"></i>
+                        <span>View on GitHub</span>
+                    </a>
+                    <a href="index.html#contact" class="hero-link hero-link-secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="project-section-title">Project <span class="text-gradient">Overview</span></h2>
+                <div class="overview-grid">
+                    <div class="overview-text">
+                        <p>
+                            <strong>Sparkly</strong> is a comprehensive full-stack nutrition and health management platform designed to help users track their dietary intake, manage health goals, and discover healthy food options. The platform consists of four main components working together seamlessly.
+                        </p>
+                        <p>
+                            The ecosystem includes a <strong>Flutter mobile application</strong> (NutriSmart) for cross-platform user experience, a <strong>Spring Boot 3 backend API</strong> for business logic and data management, a <strong>Python FastAPI nutrition engine</strong> for recipe nutrition calculations, and a <strong>React admin dashboard</strong> for content management.
+                        </p>
+                        <p>
+                            Key highlights include JWT authentication with Google OAuth2, comprehensive food and ingredient databases with 80+ nutritional indicators, meal diary tracking, health goal management, and a sophisticated nutrition calculation engine with cooking adjustment factors and unit conversions.
+                        </p>
+                        <div class="overview-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Full-Stack Ecosystem (4 Components)</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>JWT Authentication & OAuth2</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Comprehensive Nutrition Database</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Advanced Nutrition Calculator</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-visual">
+                        <div class="dashboard-analytics">
+                            <div class="analytics-grid">
+                                <div class="analytics-item">
+                                    <div class="analytics-number">4</div>
+                                    <div class="analytics-label">Components</div>
+                                    <div class="analytics-bar">
+                                        <div class="analytics-bar-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics-item">
+                                    <div class="analytics-number">80+</div>
+                                    <div class="analytics-label">Nutrition Indicators</div>
+                                    <div class="analytics-bar">
+                                        <div class="analytics-bar-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics-item">
+                                    <div class="analytics-number">100%</div>
+                                    <div class="analytics-label">Code Coverage</div>
+                                    <div class="analytics-bar">
+                                        <div class="analytics-bar-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics-item">
+                                    <div class="analytics-number">24/7</div>
+                                    <div class="analytics-label">Uptime</div>
+                                    <div class="analytics-bar">
+                                        <div class="analytics-bar-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section class="project-section project-section-dark">
+            <div class="section-container">
+                <h2 class="project-section-title">App <span class="text-gradient">Screenshots</span></h2>
+                <div class="screenshots-carousel">
+                    <button class="carousel-arrow prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-arrow next"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="image/project_image/project_sparkly/welcome.png" alt="Welcome Screen">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="image/project_image/project_sparkly/home_meal.png" alt="Home Meal Tracking">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="image/project_image/project_sparkly/login.png" alt="Login Screen">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="image/project_image/project_sparkly/home_dashboard_analyst.png" alt="Dashboard">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="image/project_image/project_sparkly/splash.png" alt="Splash Screen">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="image/project_image/project_sparkly/login_select.png" alt="Login Selection">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="image/project_image/project_sparkly/onboarding_target.png" alt="Onboarding">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="image/project_image/project_sparkly/dob.png" alt="Profile">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-dot active"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="project-section-title">Key <span class="text-gradient">Features</span></h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon feature-icon-green">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Application (Flutter)</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon feature-icon-green">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend API (Spring Boot)</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon feature-icon-green">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Nutrition Engine (FastAPI)</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon feature-icon-green">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Admin Dashboard (React)</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon feature-icon-green">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>BMR Calculator</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon feature-icon-green">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Analytics & Reports</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="project-section project-section-dark">
+            <div class="section-container">
+                <h2 class="project-section-title">Tech <span class="text-gradient">Stack</span></h2>
+                <div class="tech-stack-grid">
+                    <div class="tech-category">
+                        <h3><i class="fas fa-mobile-alt"></i> Mobile (Flutter)</h3>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                                <span>Flutter 3.5.4</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                                <span>Provider (State Management)</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+                                <span>Firebase Auth & Firestore</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite">
+                                <span>SQLite (Local Cache)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-server"></i> Backend (Spring Boot)</h3>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                                <span>Java 17 + Spring Boot 3</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Security">
+                                <span>Spring Security + JWT</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                                <span>PostgreSQL + JPA/Hibernate</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                                <span>Docker Compose</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-code"></i> Admin & Engine</h3>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                                <span>React 18 + TypeScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                                <span>Python 3.11 + FastAPI</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="TypeScript">
+                                <span>Ant Design UI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="project-section-title">System <span class="text-gradient">Architecture</span></h2>
+                <div class="architecture-content">
+                    <div class="architecture-diagram">
+                        <div class="arch-box">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Flutter Mobile App</h4>
+                            <p>Cross-platform iOS & Android</p>
+                        </div>
+                        <div class="arch-box">
+                            <i class="fas fa-server"></i>
+                            <h4>Spring Boot API</h4>
+                            <p>REST API + Business Logic</p>
+                        </div>
+                        <div class="arch-box">
+                            <i class="fas fa-brain"></i>
+                            <h4>Nutrition Engine</h4>
+                            <p>FastAPI Microservice</p>
+                        </div>
+                        <div class="arch-box">
+                            <i class="fas fa-desktop"></i>
+                            <h4>React Admin</h4>
+                            <p>Web Dashboard</p>
+                        </div>
+                    </div>
+                    <div class="architecture-description">
+                        <div class="arch-item">
+                            <h4>Microservices Architecture</h4>
+                            <p>The platform follows a microservices pattern with separate services for mobile app, backend API, nutrition calculations, and admin management, ensuring scalability and maintainability.</p>
+                        </div>
+                        <div class="arch-item">
+                            <h4>Provider Pattern</h4>
+                            <p>Flutter app uses Provider for state management, offering simple and efficient reactive state updates across the widget tree.</p>
+                        </div>
+                        <div class="arch-item">
+                            <h4>JWT & OAuth2</h4>
+                            <p>Secure authentication with JWT tokens and Google OAuth2 integration. Refresh token mechanism for seamless user experience.</p>
+                        </div>
+                        <div class="arch-item">
+                            <h4>Comprehensive Database</h4>
+                            <p>PostgreSQL database with 80+ nutritional indicators per ingredient, supporting complex queries and analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Interested in this project?</h2>
+                <p class="cta-text">Check out the repository on GitHub or contact me for more details about the implementation.</p>
+                <div class="cta-links">
+                    <a href="https://github.com/huyIT203/Healthylife-sparkly.git" target="_blank" class="hero-link hero-link-primary">
+                        <i class="fab fa-github"></i>
+                        <span>View on GitHub</span>
+                    </a>
+                    <a href="index.html#contact" class="hero-link hero-link-secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <p>© 2025 Pham Quang Huy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

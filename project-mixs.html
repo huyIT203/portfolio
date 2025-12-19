@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixs | Pham Quang Huy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="common-animations.js" defer></script>
+    <script src="project-carousel.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+        <div class="project-nav-links">
+            <a href="https://github.com/huyIT203/outfit-planner" target="_blank" class="project-nav-link">
+                <i class="fab fa-github"></i>
+                <span>View Repository</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Project Page -->
+    <main class="project-page">
+        <!-- Hero Section -->
+        <section class="project-hero project-hero-purple">
+            <div class="project-hero-content">
+                <div class="project-icon-hero project-icon-hero-purple">
+                    <img src="image/project_logo/logo_mixs.png" alt="Mixs Logo">
+                </div>
+                <span class="project-type-badge">
+                    <i class="fas fa-mobile-alt"></i>
+                    Full-Stack Mobile Application
+                </span>
+                <h1 class="project-hero-title">Mixs</h1>
+                <p class="project-hero-subtitle">
+                    Smart Outfit Planning & Wardrobe Management Application with Machine Learning recommendations, calendar-based OOTD tracking, and social login integration.
+                </p>
+                <div class="project-hero-tech">
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                        <span>Flutter</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                        <span>Dart</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <span>FastAPI</span>
+                    </div>
+                </div>
+                <div class="project-hero-links">
+                    <a href="https://github.com/huyIT203/outfit-planner" target="_blank" class="hero-link hero-link-primary">
+                        <i class="fab fa-github"></i>
+                        <span>View on GitHub</span>
+                    </a>
+                    <a href="index.html#contact" class="hero-link hero-link-secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="project-section-title">Project <span class="text-gradient">Overview</span></h2>
+                <div class="overview-grid">
+                    <div class="overview-text">
+                        <p>
+                            <strong>Mixs</strong> is a comprehensive full-stack application designed to help users manage their wardrobe, create and save outfits, plan daily OOTD (Outfit Of The Day) using a calendar, and receive smart outfit recommendations based on personal preferences and body characteristics.
+                        </p>
+                        <p>
+                            The project follows a <strong>microservices architecture</strong> with three main components: a Node.js/Express backend API for business logic and data management, a Flutter mobile app for cross-platform user experience, and a Python/FastAPI ML service for image processing and machine learning features.
+                        </p>
+                        <p>
+                            Key technical highlights include implementation of <strong>BLoC state management</strong>, <strong>clean architecture</strong> patterns, <strong>JWT authentication</strong> with access/refresh tokens, and integration with Google and Facebook OAuth for social login.
+                        </p>
+                        <p class="coming-soon-notice">
+                            <i class="fas fa-hourglass-half"></i> <strong>Note:</strong> This project is currently in active development. Screenshots will be available soon!
+                        </p>
+                        <div class="overview-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Microservices Architecture (Backend + Mobile + ML)</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>BLoC Pattern & Clean Architecture</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>JWT Authentication with Token Refresh</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>ML-powered Background Removal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-visual">
+                        <div class="dashboard-analytics">
+                            <div class="analytics-grid">
+                                <div class="analytics-item">
+                                    <div class="analytics-number">3</div>
+                                    <div class="analytics-label">Services</div>
+                                    <div class="analytics-bar">
+                                        <div class="analytics-bar-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics-item">
+                                    <div class="analytics-number">100%</div>
+                                    <div class="analytics-label">Clean Architecture</div>
+                                    <div class="analytics-bar">
+                                        <div class="analytics-bar-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics-item">
+                                    <div class="analytics-number">ML</div>
+                                    <div class="analytics-label">AI Features</div>
+                                    <div class="analytics-bar">
+                                        <div class="analytics-bar-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics-item">
+                                    <div class="analytics-number">OAuth2</div>
+                                    <div class="analytics-label">Social Login</div>
+                                    <div class="analytics-bar">
+                                        <div class="analytics-bar-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section class="project-section project-section-dark">
+            <div class="section-container">
+                <h2 class="project-section-title">App <span class="text-gradient">Screenshots</span></h2>
+                <div class="screenshots-gallery">
+                    <div class="screenshot-card">
+                        <div class="screenshot-placeholder">
+                            <i class="fas fa-home"></i>
+                            <span>Home Screen</span>
+                            <p>Coming Soon</p>
+                        </div>
+                        <div class="screenshot-label">
+                            <h4>Home Screen</h4>
+                            <p>Main dashboard with wardrobe overview and quick actions</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-card">
+                        <div class="screenshot-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Outfit Creation</span>
+                            <p>Coming Soon</p>
+                        </div>
+                        <div class="screenshot-label">
+                            <h4>Main Functionality</h4>
+                            <p>Create and manage outfits with drag-and-drop interface</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-card">
+                        <div class="screenshot-placeholder">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Login Screen</span>
+                            <p>Coming Soon</p>
+                        </div>
+                        <div class="screenshot-label">
+                            <h4>Login Screen</h4>
+                            <p>Secure authentication with social login options</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="project-section-title">Key <span class="text-gradient">Features</span></h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3>Wardrobe Management</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Outfit Creation</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Calendar & OOTD</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Smart Recommendations</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Authentication</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-edit"></i>
+                        </div>
+                        <h3>User Onboarding</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="project-section project-section-dark">
+            <div class="section-container">
+                <h2 class="project-section-title">Tech <span class="text-gradient">Stack</span></h2>
+                <div class="tech-stack-grid">
+                    <div class="tech-category">
+                        <h3><i class="fas fa-mobile-alt"></i> Mobile (Flutter)</h3>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                                <span>Flutter 3.5.4</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                                <span>flutter_bloc (BLoC Pattern)</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                                <span>go_router (Navigation)</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                                <span>Dio + Retrofit (Networking)</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                                <span>get_it + injectable (DI)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-server"></i> Backend (Node.js)</h3>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                                <span>Node.js + TypeScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+                                <span>Express.js</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                                <span>PostgreSQL + Prisma ORM</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
+                                <span>Redis (Caching)</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="JWT">
+                                <span>JWT Authentication</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-brain"></i> ML Service (Python)</h3>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                                <span>Python 3.9+</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+                                <span>FastAPI</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="rembg">
+                                <span>rembg (Background Removal)</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                                <span>Docker Compose</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="project-section-title">System <span class="text-gradient">Architecture</span></h2>
+                <div class="architecture-content">
+                    <div class="architecture-diagram">
+                        <div class="arch-box">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Flutter Mobile App</h4>
+                            <p>Cross-platform iOS & Android</p>
+                        </div>
+                        <div class="arch-box">
+                            <i class="fas fa-server"></i>
+                            <h4>Node.js Backend</h4>
+                            <p>REST API + Business Logic</p>
+                        </div>
+                        <div class="arch-box">
+                            <i class="fas fa-brain"></i>
+                            <h4>ML Service</h4>
+                            <p>Image Processing & AI</p>
+                        </div>
+                    </div>
+                    <div class="architecture-description">
+                        <div class="arch-item">
+                            <h4>Clean Architecture</h4>
+                            <p>The Flutter app follows clean architecture with clear separation between Presentation (BLoC, Pages, Widgets), Domain (Entities, Use Cases), and Data (Repositories, Data Sources) layers.</p>
+                        </div>
+                        <div class="arch-item">
+                            <h4>Dependency Injection</h4>
+                            <p>Uses get_it and injectable for dependency injection, ensuring loose coupling and easy testability of components.</p>
+                        </div>
+                        <div class="arch-item">
+                            <h4>State Management</h4>
+                            <p>BLoC pattern with flutter_bloc for predictable, testable state management. Events trigger state changes through business logic.</p>
+                        </div>
+                        <div class="arch-item">
+                            <h4>Containerization</h4>
+                            <p>Docker Compose orchestrates all services: PostgreSQL database, Redis cache, Node.js API, and Python ML service for consistent deployment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Interested in this project?</h2>
+                <p class="cta-text">Check out the source code on GitHub or contact me for more details about the implementation.</p>
+                <div class="cta-links">
+                    <a href="https://github.com/huyIT203/outfit-planner" target="_blank" class="hero-link hero-link-primary">
+                        <i class="fab fa-github"></i>
+                        <span>View on GitHub</span>
+                    </a>
+                    <a href="index.html#contact" class="hero-link hero-link-secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <p>© 2025 Pham Quang Huy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
