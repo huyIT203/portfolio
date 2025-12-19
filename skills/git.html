@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Experience - Pham Quang Huy</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="skill-page.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../common-animations.js" defer></script>
+</head>
+<body>
+    <!-- Back Navigation -->
+    <nav class="skill-nav">
+        <a href="../index.html#experience" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="skill-page">
+        <!-- Hero Section -->
+        <section class="skill-hero skill-hero-red">
+            <div class="skill-hero-content">
+                <div class="skill-icon-large">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                </div>
+                <h1 class="skill-title">Git & GitHub</h1>
+                <p class="skill-subtitle">Version Control & Collaboration</p>
+                <div class="skill-level-display">
+                    <span class="level-label">Level:</span>
+                    <div class="level-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span class="level-text">Proficient</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="skill-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Overview</span></h2>
+                <div class="overview-content">
+                    <p>
+                        Git is the version control system I use daily in my work.
+                        I have experience working with Git flow, branching strategies and collaboration workflows.
+                    </p>
+                    <p>
+                        GitHub is where I store and share my projects. I use GitHub
+                        to manage code, create pull requests, and collaborate with team members.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Experience -->
+        <section class="skill-section skill-section-dark">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Skills Learned</span></h2>
+                <div class="skills-detail-grid">
+                    <div class="skill-detail-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>Git Basics</h3>
+                        <ul>
+                            <li>Commit & Push</li>
+                            <li>Branch management</li>
+                            <li>Merge & Rebase</li>
+                            <li>Conflict resolution</li>
+                        </ul>
+                    </div>
+                    <div class="skill-detail-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Git Flow</h3>
+                        <ul>
+                            <li>Feature branches</li>
+                            <li>Release branches</li>
+                            <li>Hotfix branches</li>
+                            <li>Semantic versioning</li>
+                        </ul>
+                    </div>
+                    <div class="skill-detail-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub Features</h3>
+                        <ul>
+                            <li>Pull Requests</li>
+                            <li>Code Reviews</li>
+                            <li>Issues & Projects</li>
+                            <li>GitHub Actions</li>
+                        </ul>
+                    </div>
+                    <div class="skill-detail-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Collaboration</h3>
+                        <ul>
+                            <li>Team workflows</li>
+                            <li>Code review best practices</li>
+                            <li>Documentation</li>
+                            <li>Repository management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Commands -->
+        <section class="skill-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Common Commands</span></h2>
+                <div class="code-example">
+                    <div class="code-header">
+                        <span class="code-filename">git-commands.sh</span>
+                        <span class="code-lang">Bash</span>
+                    </div>
+                    <pre class="code-content"><code># Branch management
+git checkout -b feature/new-feature
+git merge develop
+git rebase -i HEAD~3
+
+# Stash changes
+git stash save "Work in progress"
+git stash pop
+
+# Remote operations
+git remote add origin &lt;url&gt;
+git fetch --all
+git pull origin main --rebase
+
+# History & logs
+git log --oneline --graph
+git reflog
+git cherry-pick &lt;commit-hash&gt;
+
+# Reset & revert
+git reset --soft HEAD~1
+git revert &lt;commit-hash&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="skill-section skill-section-dark">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Learning Resources</span></h2>
+                <div class="resources-list">
+                    <a href="https://git-scm.com/doc" target="_blank" class="resource-link">
+                        <i class="fas fa-book"></i>
+                        <span>Git Documentation</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://learngitbranching.js.org" target="_blank" class="resource-link">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Learn Git Branching (Interactive)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://docs.github.com" target="_blank" class="resource-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub Documentation</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="skill-footer">
+        <p>© 2024 Pham Quang Huy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

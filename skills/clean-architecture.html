@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Architecture - Pham Quang Huy</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="skill-page.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../common-animations.js" defer></script>
+</head>
+<body>
+    <!-- Back Navigation -->
+    <nav class="skill-nav">
+        <a href="../index.html#experience" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="skill-page">
+        <!-- Hero Section -->
+        <section class="skill-hero">
+            <div class="skill-hero-content">
+                <div class="skill-icon-large">
+                    <i class="fas fa-sitemap" style="font-size: 50px; color: var(--accent-primary);"></i>
+                </div>
+                <h1 class="skill-title">Clean Architecture</h1>
+                <p class="skill-subtitle">Software Design Principles & Patterns</p>
+                <div class="skill-level-display">
+                    <span class="level-label">Level:</span>
+                    <div class="level-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span class="level-text">Intermediate</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="skill-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Overview</span></h2>
+                <div class="overview-content">
+                    <p>
+                        Clean Architecture is a software architecture that helps separate concerns and 
+                        create maintainable, testable and scalable code. This architecture was proposed by Robert C. Martin.
+                    </p>
+                    <p>
+                        In Flutter projects, I apply Clean Architecture to organize code by layers,
+                        making development and maintenance easier.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Layers -->
+        <section class="skill-section skill-section-dark">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Architecture Layers</span></h2>
+                <div class="architecture-diagram">
+                    <div class="arch-layer arch-domain">
+                        <div class="layer-content">
+                            <h3>Domain Layer</h3>
+                            <p>Entities, Use Cases, Repository Interfaces</p>
+                        </div>
+                    </div>
+                    <div class="arch-layer arch-data">
+                        <div class="layer-content">
+                            <h3>Data Layer</h3>
+                            <p>Repository Impl, Data Sources, Models</p>
+                        </div>
+                    </div>
+                    <div class="arch-layer arch-presentation">
+                        <div class="layer-content">
+                            <h3>Presentation Layer</h3>
+                            <p>UI, BLoC/Provider, Widgets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principles -->
+        <section class="skill-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">SOLID Principles</span></h2>
+                <div class="skills-detail-grid">
+                    <div class="skill-detail-card">
+                        <div class="solid-letter">S</div>
+                        <h3>Single Responsibility</h3>
+                        <p>Each class should have only one reason to change</p>
+                    </div>
+                    <div class="skill-detail-card">
+                        <div class="solid-letter">O</div>
+                        <h3>Open/Closed</h3>
+                        <p>Open for extension, closed for modification</p>
+                    </div>
+                    <div class="skill-detail-card">
+                        <div class="solid-letter">L</div>
+                        <h3>Liskov Substitution</h3>
+                        <p>Subtypes must be substitutable for their base types</p>
+                    </div>
+                    <div class="skill-detail-card">
+                        <div class="solid-letter">I</div>
+                        <h3>Interface Segregation</h3>
+                        <p>Many small interfaces are better than one large interface</p>
+                    </div>
+                    <div class="skill-detail-card">
+                        <div class="solid-letter">D</div>
+                        <h3>Dependency Inversion</h3>
+                        <p>Depend on abstractions, not concretions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folder Structure -->
+        <section class="skill-section skill-section-dark">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Folder Structure</span></h2>
+                <div class="code-example">
+                    <div class="code-header">
+                        <span class="code-filename">project_structure</span>
+                        <span class="code-lang">Folder</span>
+                    </div>
+                    <pre class="code-content"><code>lib/
+├── core/
+│   ├── errors/
+│   ├── usecases/
+│   └── utils/
+├── features/
+│   └── feature_name/
+│       ├── data/
+│       │   ├── datasources/
+│       │   ├── models/
+│       │   └── repositories/
+│       ├── domain/
+│       │   ├── entities/
+│       │   ├── repositories/
+│       │   └── usecases/
+│       └── presentation/
+│           ├── bloc/
+│           ├── pages/
+│           └── widgets/
+└── injection_container.dart</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="skill-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Learning Resources</span></h2>
+                <div class="resources-list">
+                    <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html" target="_blank" class="resource-link">
+                        <i class="fas fa-book"></i>
+                        <span>The Clean Architecture - Robert C. Martin</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://resocoder.com/flutter-clean-architecture-tdd/" target="_blank" class="resource-link">
+                        <i class="fab fa-youtube"></i>
+                        <span>Flutter Clean Architecture Tutorial</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="skill-footer">
+        <p>© 2024 Pham Quang Huy. All rights reserved.</p>
+    </footer>
+
+    <style>
+        .architecture-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .arch-layer {
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+        }
+        
+        .arch-domain {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+            border: 2px solid rgba(99, 102, 241, 0.5);
+        }
+        
+        .arch-data {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(16, 185, 129, 0.2) 100%);
+            border: 2px solid rgba(6, 182, 212, 0.5);
+        }
+        
+        .arch-presentation {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);
+            border: 2px solid rgba(245, 158, 11, 0.5);
+        }
+        
+        .layer-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+        
+        .layer-content p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        .solid-letter {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .skill-detail-card h3 {
+            font-size: 16px;
+        }
+        
+        .skill-detail-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+    </style>
+</body>
+</html>
+

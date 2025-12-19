@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Experience - Pham Quang Huy</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="skill-page.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../common-animations.js" defer></script>
+</head>
+<body>
+    <!-- Back Navigation -->
+    <nav class="skill-nav">
+        <a href="../index.html#experience" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="skill-page">
+        <!-- Hero Section -->
+        <section class="skill-hero skill-hero-orange">
+            <div class="skill-hero-content">
+                <div class="skill-icon-large">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+                </div>
+                <h1 class="skill-title">Firebase</h1>
+                <p class="skill-subtitle">Backend-as-a-Service Platform by Google</p>
+                <div class="skill-level-display">
+                    <span class="level-label">Level:</span>
+                    <div class="level-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span class="level-text">Proficient</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="skill-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Overview</span></h2>
+                <div class="overview-content">
+                    <p>
+                        Firebase is the backend platform I use to build highly scalable mobile applications. 
+                        Firebase provides many services such as Authentication, Firestore,
+                        Storage, and Cloud Functions.
+                    </p>
+                    <p>
+                        In my projects, I have used Firebase to handle authentication, 
+                        store real-time data, and implement push notification features.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Experience -->
+        <section class="skill-section skill-section-dark">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Services Used</span></h2>
+                <div class="skills-detail-grid">
+                    <div class="skill-detail-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Authentication</h3>
+                        <ul>
+                            <li>Email/Password</li>
+                            <li>Google Sign-In</li>
+                            <li>Phone Authentication</li>
+                            <li>Anonymous Auth</li>
+                        </ul>
+                    </div>
+                    <div class="skill-detail-card">
+                        <i class="fas fa-database"></i>
+                        <h3>Cloud Firestore</h3>
+                        <ul>
+                            <li>Document/Collection model</li>
+                            <li>Real-time listeners</li>
+                            <li>Complex queries</li>
+                            <li>Security rules</li>
+                        </ul>
+                    </div>
+                    <div class="skill-detail-card">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Cloud Storage</h3>
+                        <ul>
+                            <li>File uploads</li>
+                            <li>Image compression</li>
+                            <li>Download URLs</li>
+                            <li>Storage rules</li>
+                        </ul>
+                    </div>
+                    <div class="skill-detail-card">
+                        <i class="fas fa-bell"></i>
+                        <h3>Cloud Messaging</h3>
+                        <ul>
+                            <li>Push notifications</li>
+                            <li>Topic messaging</li>
+                            <li>In-app messaging</li>
+                            <li>Analytics integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="skill-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Real Projects</span></h2>
+                <div class="related-projects">
+                    <div class="project-mini-card">
+                        <div class="project-mini-icon project-mini-icon-purple">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="project-mini-content">
+                            <h3>Mixs</h3>
+                            <p>Used Firebase Auth, Firestore to store wardrobe and outfit data, Storage for clothing images</p>
+                            <div class="project-mini-tech">
+                                <span>Auth</span>
+                                <span>Firestore</span>
+                                <span>Storage</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-mini-card">
+                        <div class="project-mini-icon project-mini-icon-green">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="project-mini-content">
+                            <h3>Sparkly</h3>
+                            <p>Firebase Auth for user management, Firestore for meal tracking and nutrition data</p>
+                            <div class="project-mini-tech">
+                                <span>Auth</span>
+                                <span>Firestore</span>
+                                <span>Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="skill-section skill-section-dark">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Learning Resources</span></h2>
+                <div class="resources-list">
+                    <a href="https://firebase.google.com/docs" target="_blank" class="resource-link">
+                        <i class="fas fa-globe"></i>
+                        <span>Firebase Documentation</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://firebase.flutter.dev" target="_blank" class="resource-link">
+                        <i class="fas fa-box"></i>
+                        <span>FlutterFire - Firebase for Flutter</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9j--TKIdkb3ISfRbJeJYQwC" target="_blank" class="resource-link">
+                        <i class="fab fa-youtube"></i>
+                        <span>Firebase Tutorial Series</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="skill-footer">
+        <p>© 2024 Pham Quang Huy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

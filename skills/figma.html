@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Experience - Pham Quang Huy</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="skill-page.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../common-animations.js" defer></script>
+</head>
+<body>
+    <!-- Back Navigation -->
+    <nav class="skill-nav">
+        <a href="../index.html#experience" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="skill-page">
+        <!-- Hero Section -->
+        <section class="skill-hero skill-hero-pink">
+            <div class="skill-hero-content">
+                <div class="skill-icon-large">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                </div>
+                <h1 class="skill-title">Figma</h1>
+                <p class="skill-subtitle">UI/UX Design & Prototyping Tool</p>
+                <div class="skill-level-display">
+                    <span class="level-label">Level:</span>
+                    <div class="level-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span class="level-text">Intermediate</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="skill-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Overview</span></h2>
+                <div class="overview-content">
+                    <p>
+                        Figma is the UI/UX design tool I use to create mockups and prototypes for applications.
+                        With Figma, I can design visual interfaces and create interactive prototypes.
+                    </p>
+                    <p>
+                        I use Figma during development to understand design specifications,
+                        export assets and ensure implementation matches the original design.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Experience -->
+        <section class="skill-section skill-section-dark">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Skills Learned</span></h2>
+                <div class="skills-detail-grid">
+                    <div class="skill-detail-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>UI Design</h3>
+                        <ul>
+                            <li>Component design</li>
+                            <li>Auto layout</li>
+                            <li>Responsive design</li>
+                            <li>Design systems</li>
+                        </ul>
+                    </div>
+                    <div class="skill-detail-card">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>Prototyping</h3>
+                        <ul>
+                            <li>Interactive prototypes</li>
+                            <li>Transitions & animations</li>
+                            <li>User flows</li>
+                            <li>Smart animate</li>
+                        </ul>
+                    </div>
+                    <div class="skill-detail-card">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Components</h3>
+                        <ul>
+                            <li>Component variants</li>
+                            <li>Instance overrides</li>
+                            <li>Component properties</li>
+                            <li>Nested components</li>
+                        </ul>
+                    </div>
+                    <div class="skill-detail-card">
+                        <i class="fas fa-file-export"></i>
+                        <h3>Developer Handoff</h3>
+                        <ul>
+                            <li>Export assets</li>
+                            <li>Inspect mode</li>
+                            <li>Design tokens</li>
+                            <li>CSS generation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow -->
+        <section class="skill-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Design to Code Workflow</span></h2>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-number">01</div>
+                        <h3>Receive Design</h3>
+                        <p>Receive Figma file from designer or design mockup myself</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">02</div>
+                        <h3>Analyze Structure</h3>
+                        <p>Analyze layout, spacing, typography and colors</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">03</div>
+                        <h3>Export Assets</h3>
+                        <p>Export images, icons and necessary assets</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">04</div>
+                        <h3>Implement</h3>
+                        <p>Convert design to Flutter widgets</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="skill-section skill-section-dark">
+            <div class="section-container">
+                <h2 class="section-title"><span class="text-gradient">Learning Resources</span></h2>
+                <div class="resources-list">
+                    <a href="https://help.figma.com" target="_blank" class="resource-link">
+                        <i class="fas fa-book"></i>
+                        <span>Figma Help Center</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://www.figma.com/community" target="_blank" class="resource-link">
+                        <i class="fas fa-users"></i>
+                        <span>Figma Community</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://www.youtube.com/c/Figmadesign" target="_blank" class="resource-link">
+                        <i class="fab fa-youtube"></i>
+                        <span>Figma YouTube Channel</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="skill-footer">
+        <p>© 2024 Pham Quang Huy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
